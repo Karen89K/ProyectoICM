@@ -2,6 +2,7 @@ package com.teamdinamita.proyectoeventosicm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -72,7 +74,7 @@ public class Registro extends AppCompatActivity {
             return;
         } else {
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "https://zjbicqfh.lucusvirtual.es/insertar.php",
+            StringRequest request = new StringRequest(Request.Method.POST, "-",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

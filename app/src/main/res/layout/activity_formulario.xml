@@ -6,4 +6,130 @@
     android:layout_height="match_parent"
     tools:context=".Formulario">
 
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="¿Has estado en contacto con un caso confirmado del nuevo Coronavirus?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_contacto_tiempo"
+        android:layout_width="400dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="4dp"
+        android:text="¿Hace cuanto tiempo? (hace dos semanas ó menos / hace mas de dos semanas)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_contacto" />
+
+    <TextView
+        android:id="@+id/txt_sintomas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="¿Tiene o ha tenido alguno de estos sintomas?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_contactot1" />
+
+    <CheckBox
+        android:id="@+id/cb_contacto"
+        android:layout_width="62dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="4dp"
+        android:text="Sí"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <CheckBox
+        android:id="@+id/cb_contactot1"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Dos semanas o menos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_contacto_tiempo" />
+
+    <CheckBox
+        android:id="@+id/cb_contactot2"
+        android:layout_width="158dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Dos semanas o más"
+        app:layout_constraintStart_toEndOf="@+id/cb_contactot1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_contacto_tiempo" />
+
+    <CheckBox
+        android:id="@+id/cb_sint_temp"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="16dp"
+        android:text="Temperatura de 38°C o más "
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sintomas" />
+
+    <CheckBox
+        android:id="@+id/cb_sint_cuerpo"
+        android:layout_width="240dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="8dp"
+        android:text="Sufre malestar, dolores de cabeza o cualquierotro problema de salud agudo"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_sint_estornudo" />
+
+    <CheckBox
+        android:id="@+id/cb_sint_respiracion"
+        android:layout_width="161dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="4dp"
+        android:text="Dificultad respiratoria "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_sint_cuerpo" />
+
+    <CheckBox
+        android:id="@+id/cb_sint_estornudo"
+        android:layout_width="239dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="8dp"
+        android:text="Tos y/o estornudos fuertes "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_sint_temp" />
+
+    <Button
+        android:id="@+id/btn_validarFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="16dp"
+        android:text="Continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_sint_olfato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Perdida del olfato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_sint_respiracion" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
