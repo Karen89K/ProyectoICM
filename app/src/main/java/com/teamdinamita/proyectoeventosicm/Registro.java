@@ -74,7 +74,7 @@ public class Registro extends AppCompatActivity {
             return;
         } else {
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "-",
+            StringRequest request = new StringRequest(Request.Method.POST, "https://zjbicqfh.lucusvirtual.es/insertar.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
