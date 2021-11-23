@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Nombre:"
         android:textColor="#070707"
@@ -22,43 +23,44 @@
         android:id="@+id/txtNombreE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtDesc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Descripción:"
         android:textColor="#0C0C0C"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtDesc"
+        app:layout_constraintEnd_toStartOf="@+id/txtDesc"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Descripción"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreE" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Fecha:"
         android:textColor="#0B0B0B"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtFecha"
@@ -69,8 +71,8 @@
         android:id="@+id/txtFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Fecha"
         android:inputType="date"
@@ -93,38 +95,35 @@
         android:id="@+id/txtEntorno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Entorno"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtForo"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Dirección:"
         android:textColor="#050505"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtDireccion"
         app:layout_constraintEnd_toStartOf="@+id/txtDireccion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtDireccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Dirección"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtEntorno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
 
@@ -156,13 +155,13 @@
         android:id="@+id/txtForo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Foro"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/txtEstado"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEntorno" />
 
     <TextView
         android:id="@+id/textView14"
@@ -178,23 +177,45 @@
         android:id="@+id/txtEstado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Estado"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="465dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtForo" />
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="124dp"
         android:layout_height="57dp"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"
         android:text="Guardar"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCorreoC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Confirmar Correo:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtCorreoConf"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCorreoConf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:hint="Correo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtCorreoC"
         app:layout_constraintTop_toBottomOf="@+id/txtEstado" />
 </androidx.constraintlayout.widget.ConstraintLayout>

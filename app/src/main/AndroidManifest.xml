@@ -22,7 +22,7 @@
             android:name=".AdministrarEvento"
             android:exported="true" />
         <activity
-            android:name=".RegistrarEvento"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".Menu"
@@ -31,7 +31,7 @@
             android:name=".Registro"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RegistrarEvento"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
