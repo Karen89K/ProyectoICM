@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.teamdinamita.proyectoeventosicm">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoEventosICM">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".Eventos"
             android:exported="false" />
@@ -22,7 +28,7 @@
             android:name=".AdministrarEvento"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RegistrarEvento"
             android:exported="true" />
         <activity
             android:name=".Menu"
@@ -31,7 +37,7 @@
             android:name=".Registro"
             android:exported="true" />
         <activity
-            android:name=".RegistrarEvento"
+            android:name=".Medidas_sanitarias"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +46,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
 </manifest>
