@@ -28,7 +28,7 @@
             android:name=".AdministrarEvento"
             android:exported="true" />
         <activity
-            android:name=".RegistrarEvento"
+            android:name=".Medidas_sanitarias"
             android:exported="true" />
         <activity
             android:name=".Menu"
@@ -37,7 +37,7 @@
             android:name=".Registro"
             android:exported="true" />
         <activity
-            android:name=".Medidas_sanitarias"
+            android:name=".RegistrarEvento"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

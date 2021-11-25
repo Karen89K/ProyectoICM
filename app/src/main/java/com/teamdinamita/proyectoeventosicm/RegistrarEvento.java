@@ -90,9 +90,8 @@ public class RegistrarEvento extends AppCompatActivity {
                                 Intent intent = new Intent(RegistrarEvento.this, MisEventos.class);
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(RegistrarEvento.this, response, Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
-                                Toast.makeText(RegistrarEvento.this, "No se puede insertar", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegistrarEvento.this, response, Toast.LENGTH_SHORT).show();
                             }
                         }
                     }, new Response.ErrorListener() {
@@ -115,8 +114,7 @@ public class RegistrarEvento extends AppCompatActivity {
                     params.put("entorno", Entorno);
                     params.put("foro", Foro);
                     params.put("estado", Estado);
-
-
+                    params.put("correo", "deeper41swg@gmail.com");
                     return params;
                 }
             };
