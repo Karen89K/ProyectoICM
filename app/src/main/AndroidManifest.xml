@@ -16,16 +16,13 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".Eventos"
+            android:name=".RegistrarEvento"
             android:exported="false" />
         <activity
             android:name=".Formulario"
             android:exported="true" />
         <activity
             android:name=".MisEventos"
-            android:exported="true" />
-        <activity
-            android:name=".AdministrarEvento"
             android:exported="true" />
         <activity
             android:name=".Medidas_sanitarias"
@@ -37,7 +34,7 @@
             android:name=".Registro"
             android:exported="true" />
         <activity
-            android:name=".RegistrarEvento"
+            android:name=".Eventos"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
