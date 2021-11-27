@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoEventosICM">
         <activity
-            android:name=".MainActivity"
+            android:name=".MisEventos"
             android:exported="true" />
         <activity
             android:name=".RegistrarEvento"
@@ -22,7 +22,7 @@
             android:name=".Formulario"
             android:exported="true" />
         <activity
-            android:name=".MisEventos"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".Medidas_sanitarias"
