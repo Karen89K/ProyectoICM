@@ -4,45 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".Menu">
 
-
   <TextView
-      android:id="@+id/textView"
+      android:id="@+id/t_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
-      android:fontFamily="sans-serif-smallcaps"
-      android:text="MENU"
-      android:textColor="#131212"
-      android:textSize="34sp"
-      android:textStyle="bold" />
+      android:background="@color/white"
+      android:fontFamily="sans-serif-condensed-medium"
+      android:text="SAFE EVENTS"
+      android:textColor="#0B0B0B"
+      android:textSize="24sp" />
+
+  <ImageView
+      android:id="@+id/i_logo"
+      android:layout_width="210dp"
+      android:layout_height="238dp"
+      app:srcCompat="@drawable/coronavirus" />
 
   <Button
-      android:id="@+id/btnVerMisEventos"
-      android:layout_width="wrap_content"
-      android:layout_height="62dp"
-      android:layout_gravity="center"
-      android:backgroundTint="#009975"
-      android:text="Ver Mis Eventos" />
-
-  <Button
-      android:id="@+id/btnAdmin"
-      android:layout_width="181dp"
+      android:id="@+id/b_eventos"
+      style="@style/botonesMenu"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:backgroundTint="#009975"
-      android:text="Administrar mis eventos" />
+      android:onClick="Eventos"
+      android:text="@string/eventos" />
 
   <Button
-      android:id="@+id/btnEventos"
-      android:layout_width="wrap_content"
-      android:layout_height="62dp"
-      android:layout_gravity="center"
-      android:backgroundTint="#009975"
-      android:gravity="center"
-      android:text="Eventos" />
+      android:id="@+id/b_miseventos"
+      style="@style/botonesMenu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="MisEventos"
+      android:text="@string/miseventos" />
+
+  <Button
+      android:id="@+id/b_medidas"
+      style="@style/botonesMenu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="MedidasSanitarias"
+      android:text="@string/medidas" />
+
+  <Button
+      android:id="@+id/b_about"
+      style="@style/botonesMenu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="Acercade"
+      android:text="@string/about" />
+
+  <Button
+      android:id="@+id/b_salir"
+      style="@style/botonesMenu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="Salir"
+      android:text="@string/salir" />
 
 
 </LinearLayout>

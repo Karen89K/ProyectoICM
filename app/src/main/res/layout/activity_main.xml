@@ -51,7 +51,7 @@
                     android:layout_marginTop="4dp"
                     android:onClick="Registro"
                     android:text="Registrate"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/colorPrincipal"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -84,11 +84,12 @@
 
             <Button
                 android:id="@+id/btn_login"
+                style="@style/botonesMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/button"
-                android:backgroundTint="@null"
+                android:backgroundTint="#191818"
                 android:onClick="Login"
                 android:text="Ingresar"
                 android:textColor="@android:color/white"

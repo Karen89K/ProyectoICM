@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoEventosICM">
         <activity
+            android:name=".ErrorEvento"
+            android:exported="true" />
+        <activity
+            android:name=".InfoApp"
+            android:exported="true" />
+        <activity
             android:name=".MisEventos"
             android:exported="true" />
         <activity
@@ -22,7 +28,7 @@
             android:name=".Formulario"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Eventos"
             android:exported="true" />
         <activity
             android:name=".Medidas_sanitarias"
@@ -34,7 +40,7 @@
             android:name=".Registro"
             android:exported="true" />
         <activity
-            android:name=".Eventos"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
