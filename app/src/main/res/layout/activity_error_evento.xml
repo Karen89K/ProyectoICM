@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ErrorEvento">
+
+    <TextView
+        android:id="@+id/t_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/error"
+        android:textColor="#CD2828"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/i_logo"
+        android:layout_width="210dp"
+        android:layout_height="238dp"
+        app:srcCompat="@drawable/covid" />
+
+    <TextView
+        android:id="@+id/t_errordetalles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/errordetalles"
+        android:textColor="#C62626"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/b_Salirr"
+        style="@style/botonesMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salir" />
+
+
+</LinearLayout>
