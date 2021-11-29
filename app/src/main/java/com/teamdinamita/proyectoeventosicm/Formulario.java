@@ -23,11 +23,17 @@ public class Formulario extends AppCompatActivity {
     Boolean cbt2=false;
     Boolean olfato = false;
     Button btn_validar;
+    String correo;
     int puntaje=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
+        Bundle correoB = getIntent().getExtras();
+        System.out.println(correoB);
+        if (correoB != null) {
+            correo = correoB.getString("correoUs");
+        }
         initUI();
 
     }
@@ -156,11 +162,14 @@ public class Formulario extends AppCompatActivity {
             public void onClick(View v) {
                 if(puntaje <= 2){
                     //cambiar a todos los eventos de la app
-                    Intent intent = new Intent(Formulario.this, Eventos.class);
+                    Intent intent = new Intent(Formulario.this, MisEventos.class);
+                    intent.putExtra("correoUs",correo);
+                    System.out.println(correo);
                     startActivity(intent);
                 }else{
                     if(puntaje >=3){
-                        Toast.makeText(getApplicationContext(),"T la kreiste",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Formulario.this, ErrorEvento.class);
+                        startActivity(intent);
                     }
                 }
             }

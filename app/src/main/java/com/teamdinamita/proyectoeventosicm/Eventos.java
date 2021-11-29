@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -24,12 +25,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Eventos extends AppCompatActivity {
     ListView listView;
     adaptador adapter;
     String url = "https://zjbicqfh.lucusvirtual.es/mostrar.php";
     ClaseEvento evento;
+    String correo;
     public static ArrayList<ClaseEvento> eventoArrayList = new ArrayList<>();
     String eventoCuerpo[] = new String[8];
 
@@ -40,7 +44,11 @@ public class Eventos extends AppCompatActivity {
         listView = findViewById(R.id.myListView);
         adapter = new adaptador(this, eventoArrayList);
         listView.setAdapter(adapter);
-
+        Bundle correoB = getIntent().getExtras();
+        System.out.println(correoB);
+        if (correoB != null) {
+            correo = correoB.getString("correoUs");
+        }
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -73,7 +81,7 @@ public class Eventos extends AppCompatActivity {
 
     public void retrieveData() {
 
-        StringRequest request = new StringRequest(Request.Method.POST, url,
+        StringRequest    request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -119,7 +127,6 @@ public class Eventos extends AppCompatActivity {
                 Toast.makeText(Eventos.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
 

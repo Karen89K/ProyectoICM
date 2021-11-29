@@ -7,15 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Menu extends AppCompatActivity {
-
+String correo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        Bundle correoB = getIntent().getExtras();
+        System.out.println(correoB);
+        if (correoB != null) {
+            correo = correoB.getString("correoUs");
+        }
+
     }
 
     public void Eventos(View view) {
         Intent intent = new Intent(Menu.this, Eventos.class);
+        intent.putExtra("correoUs",correo);
         startActivity(intent);
     }
 
