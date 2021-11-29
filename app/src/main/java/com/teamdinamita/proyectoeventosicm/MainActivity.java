@@ -3,6 +3,7 @@ package com.teamdinamita.proyectoeventosicm;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     EditText txtEmail,txtPass;
     String correo, password;
     String url = "https://zjbicqfh.lucusvirtual.es/login.php";
-
+    private Context mCont=this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
                         txtEmail.setText("");
                         txtPass.setText("");
-                        startActivity(new Intent(getApplicationContext(),Menu.class));
+                        Intent intent = new Intent(mCont, Menu.class);
+                        intent.putExtra("correoUs",correo);
+                        startActivity(intent);
                         Toast.makeText(MainActivity.this, response, Toast.LENGTH_SHORT).show();
                     }
                     else{
