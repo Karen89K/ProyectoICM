@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,15 +34,21 @@ public class MisEventos extends AppCompatActivity {
     ClaseEvento evento;
     public static ArrayList<ClaseEvento> eventoArrayList = new ArrayList<>();
     String eventoCuerpo[] = new String[8];
-
+    Button volver;
+    String correo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mis_eventos);
+        Bundle correoB = getIntent().getExtras();
+        System.out.println(correoB);
+        if (correoB != null) {
+            correo = correoB.getString("correoUs");
+        }
         listView = findViewById(R.id.myListView);
         adapter = new adaptador(this, eventoArrayList);
         listView.setAdapter(adapter);
-
+        volver = (Button)findViewById(R.id.id_regresar);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -51,9 +58,11 @@ public class MisEventos extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 ProgressDialog progressDialog = new ProgressDialog(view.getContext());
 
-                CharSequence[] dialogItem = {"Descripcion: " + eventoArrayList.get(position).getDescripcion() + '\n' + "Fecha: " + eventoArrayList.get(position).getFecha() + '\n' + "Direccion: "
+                CharSequence[] dialogItem = {
+                        "Descripcion: " + eventoArrayList.get(position).getDescripcion() + '\n' + "Fecha: " + eventoArrayList.get(position).getFecha() + '\n' + "Direccion: "
                         + eventoArrayList.get(position).getDireccion() + '\n' + "Entorno: " + eventoArrayList.get(position).getEntorno() + '\n' + "Foro: " + eventoArrayList.get(position).getForo() +
-                        '\n' + "Estado: " + eventoArrayList.get(position).getEstado()};
+                        '\n' + "Estado: " + eventoArrayList.get(position).getEstado()
+                };
                 builder.setTitle(eventoArrayList.get(position).getNombre());
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
@@ -66,6 +75,14 @@ public class MisEventos extends AppCompatActivity {
                 builder.create().show();
 
 
+            }
+        });
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MisEventos.this, Menu.class);
+                intent.putExtra("correoUs",correo);
+                startActivity(intent);
             }
         });
 

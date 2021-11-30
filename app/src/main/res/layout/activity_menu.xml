@@ -42,6 +42,14 @@
       android:text="@string/miseventos" />
 
   <Button
+      android:id="@+id/b_registrareventos"
+      style="@style/botonesMenu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="registrareventos"
+      android:text="@string/registrarevento" />
+
+  <Button
       android:id="@+id/b_medidas"
       style="@style/botonesMenu"
       android:layout_width="match_parent"
@@ -60,10 +68,11 @@
   <Button
       android:id="@+id/b_salir"
       style="@style/botonesMenu"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_width="411dp"
+      android:layout_height="79dp"
+      android:backgroundTint="#FF0000"
       android:onClick="Salir"
-      android:text="@string/salir" />
+      android:text="¡Mandar alerta de posible contagio!" />
 
 
 </LinearLayout>

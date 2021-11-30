@@ -1,8 +1,14 @@
 package com.teamdinamita.proyectoeventosicm;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,10 +31,29 @@ public class Formulario extends AppCompatActivity {
     Button btn_validar;
     String correo;
     int puntaje=0;
+    NotificationManagerCompat notificationManagerCompat;
+    Notification notification;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("myCh", "My Channel", NotificationManager.IMPORTANCE_DEFAULT);
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "myCh")
+                .setSmallIcon(android.R.drawable.ic_dialog_alert)
+                .setContentTitle("¡Alerta Covid!")
+                .setContentText("Una persona contagiada intenta asistir a un evento");
+
+        notification = builder.build();
+
+        notificationManagerCompat = NotificationManagerCompat.from(this);
+
         Bundle correoB = getIntent().getExtras();
         System.out.println(correoB);
         if (correoB != null) {
@@ -168,6 +193,7 @@ public class Formulario extends AppCompatActivity {
                     startActivity(intent);
                 }else{
                     if(puntaje >=3){
+                        notificationManagerCompat.notify(1, notification);
                         Intent intent = new Intent(Formulario.this, ErrorEvento.class);
                         startActivity(intent);
                     }
