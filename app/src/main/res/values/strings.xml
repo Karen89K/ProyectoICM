@@ -8,5 +8,5 @@
     <string name="error">¡Lo sentimos!</string>
     <string name="errordetalles">No cumples con los estándares de salud necesarios, por favor ve al médico.</string>
     <string name="info">Safe events versión 1.0, desarrollada por: Benjamin Reynoso, Armando Ruvalcaba y Karen Ornelas </string>
-
+    <string name="registrarevento">Registrar Eventos</string>
 </resources>

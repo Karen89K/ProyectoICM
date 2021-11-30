@@ -25,12 +25,16 @@ import java.util.Map;
 public class RegistrarEvento extends AppCompatActivity {
     EditText txtNombreE,txtDesc,txtFecha,txtDireccion,txtEntorno,txtForo,txtEstado,txtCorreo;
     Button btnGuardar;
-
+    String correo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_evento);
-
+        Bundle correoB = getIntent().getExtras();
+        System.out.println(correoB);
+        if (correoB != null) {
+            correo = correoB.getString("correoUs");
+        }
 
         initUI();
     }
@@ -87,7 +91,8 @@ public class RegistrarEvento extends AppCompatActivity {
                             if (response.equalsIgnoreCase("Datos insertados")) {
                                 Toast.makeText(RegistrarEvento.this, "Datos insertados", Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
-                                Intent intent = new Intent(RegistrarEvento.this, MisEventos.class);
+                                Intent intent = new Intent(RegistrarEvento.this, Menu.class);
+                                intent.putExtra("correoUs", correo);
                                 startActivity(intent);
                             } else {
                                 progressDialog.dismiss();
@@ -114,7 +119,7 @@ public class RegistrarEvento extends AppCompatActivity {
                     params.put("entorno", Entorno);
                     params.put("foro", Foro);
                     params.put("estado", Estado);
-                    params.put("correo", "deeper41swg@gmail.com");
+                    params.put("correo", correo);
                     return params;
                 }
             };

@@ -65,7 +65,9 @@ public class Eventos extends AppCompatActivity {
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
-                        startActivity(new Intent(getApplicationContext(), Formulario.class));
+                        Intent intent = new Intent(getApplicationContext(), Formulario.class);
+                        intent.putExtra("correoUs",correo);
+                        startActivity(intent);
                     }
                 });
 
