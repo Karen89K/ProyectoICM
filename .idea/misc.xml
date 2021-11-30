@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ProyectosAndroid/DesarrolloAplicacionesMoviles/ProyectoICM/app/src/main/res/layout/activity_error_evento.xml" value="0.371875" />
         <entry key="..\:/ProyectosAndroid/DesarrolloAplicacionesMoviles/ProyectoICM/app/src/main/res/layout/activity_eventos.xml" value="0.371875" />
         <entry key="..\:/ProyectosAndroid/DesarrolloAplicacionesMoviles/ProyectoICM/app/src/main/res/layout/activity_formulario.xml" value="0.371875" />
+        <entry key="..\:/ProyectosAndroid/DesarrolloAplicacionesMoviles/ProyectoICM/app/src/main/res/layout/activity_info_app.xml" value="0.371875" />
         <entry key="..\:/ProyectosAndroid/DesarrolloAplicacionesMoviles/ProyectoICM/app/src/main/res/layout/activity_main.xml" value="0.371875" />
         <entry key="..\:/ProyectosAndroid/DesarrolloAplicacionesMoviles/ProyectoICM/app/src/main/res/layout/activity_medidas_sanitarias.xml" value="0.371875" />
         <entry key="..\:/ProyectosAndroid/DesarrolloAplicacionesMoviles/ProyectoICM/app/src/main/res/layout/activity_menu.xml" value="0.371875" />
@@ -18,14 +20,11 @@
         <entry key="..\:/Users/Benjimon41/AndroidStudioProjects/ProyectoICM/app/src/main/res/layout/list_eventosdisponibles.xml" value="0.34270833333333334" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/drawable/button.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/drawable/textverde.xml" value="0.17407407407407408" />
-        <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_acercade.xml" value="0.14402173913043478" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_administrar_evento.xml" value="0.13949275362318841" />
-        <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_error_evento.xml" value="0.17" />
-        <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_formulario.xml" value="0.21" />
-        <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_info_app.xml" value="0.25" />
+        <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_formulario.xml" value="0.13949275362318841" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_medidas_sanitarias.xml" value="0.25" />
-        <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_menu.xml" value="0.2" />
+        <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_menu.xml" value="0.25" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_mis_eventos.xml" value="0.22" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_registrar_evento.xml" value="0.25" />
         <entry key="..\:/Users/Karen Ornelas/AndroidStudioProjects/ProyectoEventosICM/app/src/main/res/layout/activity_registro.xml" value="0.25" />

@@ -1,8 +1,14 @@
 package com.teamdinamita.proyectoeventosicm;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,11 +30,31 @@ public class Formulario extends AppCompatActivity {
     Boolean olfato = false;
     Button btn_validar;
     int puntaje=0;
+
+    NotificationManagerCompat notificationManagerCompat;
+    Notification notification;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
         initUI();
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("myCh", "My Channel", NotificationManager.IMPORTANCE_DEFAULT);
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "myCh")
+                .setSmallIcon(android.R.drawable.stat_notify_sync)
+                .setContentTitle("¡Alerta Covid!")
+                .setContentText("Una persona contagiada intenta asistir a un evento");
+
+        notification = builder.build();
+
+        notificationManagerCompat = NotificationManagerCompat.from(this);
 
     }
 
@@ -159,8 +185,11 @@ public class Formulario extends AppCompatActivity {
                     Intent intent = new Intent(Formulario.this, Eventos.class);
                     startActivity(intent);
                 }else{
-                    if(puntaje >=3){
-                        Toast.makeText(getApplicationContext(),"T la kreiste",Toast.LENGTH_SHORT).show();
+                    if(puntaje > 2){
+                        Intent intent = new Intent(Formulario.this, ErrorEvento.class);
+                        startActivity(intent);
+
+                        notificationManagerCompat.notify(1, notification);
                     }
                 }
             }
